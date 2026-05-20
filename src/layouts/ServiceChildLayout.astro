@@ -2,7 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import { site } from '../data/siteData.js';
 const { parent, child, siblingServices, title, description, canonicalPath } = Astro.props;
-const [lead, context, planning, cost, timing, outcome, communication, quality, inspection, priorities, estimate, local, comparison] = child.content;
+const [, context, planning, cost, timing, outcome, communication, quality, inspection, priorities, estimate, local, comparison] = child.content;
+const lead = `For ${child.name.toLowerCase()}, we start with the property: where the fence should run, what it needs to block or protect, how gates should work, and which material makes sense for the yard.`;
 const phone = site.phone.replace(/\D/g, '');
 ---
 <BaseLayout title={title} description={description} canonicalPath={canonicalPath}>
@@ -17,24 +18,24 @@ const phone = site.phone.replace(/\D/g, '');
   </section>
 
   <section class="service-snapshot">
-    <div><span>01</span><strong>Inspect</strong><p>Confirm the property condition and the right service path.</p></div>
-    <div><span>02</span><strong>Scope</strong><p>Separate urgent needs, optional upgrades, and timing constraints.</p></div>
-    <div><span>03</span><strong>Complete</strong><p>Finish cleanly with practical maintenance guidance.</p></div>
+    <div><span>01</span><strong>Walk The Line</strong><p>Review the fence run, grade, gates, access, and the problem the fence needs to solve.</p></div>
+    <div><span>02</span><strong>Set The Scope</strong><p>Separate must-have layout decisions from optional upgrades, repairs, or material choices.</p></div>
+    <div><span>03</span><strong>Install Cleanly</strong><p>Finish with straight runs, usable gates, tidy staging, and clear care guidance.</p></div>
   </section>
 
   <section class="section conversion-intro">
     <div class="intro-copy">
-      <p class="eyebrow dark">Local Service Page</p>
-      <h2>{child.name}: Clear Answers. Clean Work. No Guesswork.</h2>
+      <p class="eyebrow dark">Fence Service Planning</p>
+      <h2>{child.name}: Layout, Materials, Access, And A Clear Next Step.</h2>
       <p class="lede">{lead}</p>
     </div>
     <aside class="estimate-card">
       <h3>Start With A Focused Local Review</h3>
       <ul>
-        <li>Property type and access</li>
-        <li>Visible concern or goal</li>
-        <li>Timing, season, or urgency</li>
-        <li>Photos if available</li>
+        <li>Fence line and approximate length</li>
+        <li>Privacy, safety, pet, pool, or boundary goal</li>
+        <li>Gate locations, slope, and access</li>
+        <li>HOA, neighbor, or permit concerns</li>
       </ul>
       <a href="/contact/" class="btn">Get The Next Step</a>
     </aside>
@@ -42,7 +43,7 @@ const phone = site.phone.replace(/\D/g, '');
 
   <section class="section modular-grid">
     <article class="feature-block wide">
-      <h2>Why This Service Is Different In Frederick</h2>
+      <h2>What We Check Before Recommending The Fence</h2>
       <p>{context}</p>
       <p>{local}</p>
     </article>
@@ -63,15 +64,15 @@ const phone = site.phone.replace(/\D/g, '');
   </section>
 
   <section class="section content-modules">
-    <div class="module-card"><h2>Plan First. Price Second.</h2><p>{planning}</p><p>{inspection}</p></div>
+    <div class="module-card"><h2>Plan The Fence Before Pricing It</h2><p>{planning}</p><p>{inspection}</p></div>
     <div class="module-card tinted"><h2>What Shapes The Estimate</h2><p>{cost}</p><p>{estimate}</p></div>
     <div class="module-card"><h2>Timing, Access, And Property Use</h2><p>{timing}</p><p>{communication}</p></div>
-    <div class="module-card dark-card"><h2>Built To Make The Result Last</h2><p>{outcome}</p><p>{quality}</p></div>
+    <div class="module-card dark-card"><h2>Built To Hold Its Line</h2><p>{outcome}</p><p>{quality}</p></div>
   </section>
 
   <section class="conversion-strip">
     <div>
-      <p class="eyebrow">Frederick Service Planning</p>
+      <p class="eyebrow">Frederick Fence Planning</p>
       <h2>Need A Fast Answer On {child.name}?</h2>
       <p>{priorities}</p>
     </div>
